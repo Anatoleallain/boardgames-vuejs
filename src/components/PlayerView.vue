@@ -1,6 +1,7 @@
 <template>
   <h1>{{ teamName }}</h1>
 
+  
   <selection-box 
     :selections="selections"
     :isComplet="isComplet"
@@ -12,7 +13,7 @@
     v-show="showSelection"
     :array="selections"
   />
-  
+
   <player-card
     v-for="(player, index) in players" 
     :key="index"
@@ -20,6 +21,8 @@
     @add-player="addPlayer"
     v-show="!isComplet"
    />
+
+
 
 </template>
 
@@ -31,6 +34,7 @@ import SelectionView from './SelectionView'
 
 export default {
   name: "player-view",
+  props: ["team"],
   components: {
     PlayerCard,
     SelectionBox,
