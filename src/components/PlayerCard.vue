@@ -48,6 +48,11 @@ export default {
   methods: {
     addToSelection() {
       this.$emit('add-player', this.player)
+      //this.$store.state.selections.push(this.player)
+      this.$store.dispatch({
+        type: 'add',
+        value: this.player
+      })
     }
   }
  
