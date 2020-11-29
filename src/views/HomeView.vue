@@ -10,6 +10,7 @@
   <ul>
     <li v-for="movie in movies" :key="movie.id">
       {{ movie.title }}
+       est un film ok
     </li>
   </ul>
 </template>
